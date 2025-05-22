@@ -11,9 +11,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
       <title>Persephone Garden</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
-    <NavBar />
-    <main className="container mx-auto px-4 py-8">{children}</main>
-    <Footer />
+    <div className="min-h-screen flex flex-col">
+      <NavBar />
+      <main className="flex-grow container mx-auto px-4 py-12 animate-fadeIn">
+        {children}
+      </main>
+      <Footer />
+    </div>
   </>
 );
 

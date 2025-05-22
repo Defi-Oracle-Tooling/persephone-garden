@@ -29,3 +29,5 @@ out/
 *.ntvs*
 *.njsproj
 *.sln
+cache/
+*.swp

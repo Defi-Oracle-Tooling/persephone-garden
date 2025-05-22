@@ -4,6 +4,30 @@ set -euo pipefail
 # Set the project root dynamically
 PROJECT_ROOT="$(pwd)"
 
+# Enhanced script usability
+if [ "${1:-}" == "--help" ]; then
+  echo "Usage: ./generate_structure.sh [options]"
+  echo "Options:"
+  echo "  --help       Show this help message"
+  echo "  --reset      Reset the project structure"
+  exit 0
+fi
+
+if [ "${1:-}" == "--reset" ]; then
+  echo "Resetting project structure..."
+  rm -rf configs docs legal membership operations marketing tech scripts
+  echo "Project structure reset."
+  exit 0
+fi
+
+# Add error handling and logging
+LOG_FILE="generate_structure.log"
+exec > >(tee -i "$LOG_FILE")
+exec 2>&1
+
+# Log start of script
+echo "Script started at $(date)"
+
 # Root files
 touch "$PROJECT_ROOT/.gitignore" "$PROJECT_ROOT/LICENSE" "$PROJECT_ROOT/README.md"
 
@@ -73,3 +97,6 @@ chmod +x "$PROJECT_ROOT/scripts/generate_structure.sh"
 
 echo "Repository scaffold created successfully."
 echo "Next: open README.md and start adding project details!"
+
+# Log end of script
+echo "Script completed at $(date)"

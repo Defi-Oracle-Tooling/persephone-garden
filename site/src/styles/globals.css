@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Consolidate styles */
+/* Consolidated styles */
 :root {
   --primary-color: #5A189A;
   --secondary-color: #FFC300;

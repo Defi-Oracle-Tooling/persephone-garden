@@ -3,8 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Consolidate styles */
+:root {
+  --primary-color: #5A189A;
+  --secondary-color: #FFC300;
+  --accent-color: #3A0CA3;
+  --background-color: #F3F2F1;
+  --text-primary-color: #212529;
+  --text-secondary-color: #495057;
+}
+
 html, body {
-  @apply bg-background text-text-primary font-sans antialiased;
+  background-color: var(--background-color);
+  color: var(--text-primary-color);
+  font-family: 'Inter', sans-serif;
 }
 
 a {

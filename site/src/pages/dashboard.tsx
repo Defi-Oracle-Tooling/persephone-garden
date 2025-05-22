@@ -1,7 +1,9 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Layout from '../components/Layout';
-import UpcomingEvents from '../components/DashboardWidgets/UpcomingEvents';
-import MembershipStatus from '../components/DashboardWidgets/MembershipStatus';
+
+const LazyMembershipStatus = dynamic(() => import('../components/DashboardWidgets/MembershipStatus'), { ssr: false });
+const LazyUpcomingEvents = dynamic(() => import('../components/DashboardWidgets/UpcomingEvents'), { ssr: false });
 
 export default function Dashboard() {
   return (
@@ -12,10 +14,10 @@ export default function Dashboard() {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-lg animate-slideUp">
-            <UpcomingEvents />
+            <LazyUpcomingEvents />
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg animate-slideUp">
-            <MembershipStatus />
+            <LazyMembershipStatus />
           </div>
         </div>
       </section>

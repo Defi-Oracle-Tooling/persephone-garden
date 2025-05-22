@@ -16,3 +16,7 @@ In this dream-made-real, each guest becomes a guardian of a hidden world. Here, 
 
 Welcome to the dream.  
 Welcome to Persephone’s Garden.
+
+## Contributing
+
+We welcome contributions! Please see the `CONTRIBUTING.md` file for guidelines on how to contribute to this project.

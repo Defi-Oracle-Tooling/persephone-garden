@@ -46,7 +46,27 @@ touch "$PROJECT_ROOT/docs/compliance.md" \
       "$PROJECT_ROOT/tech/inventory_system.md" \
       "$PROJECT_ROOT/tech/pos_integration.md" \
       "$PROJECT_ROOT/configs/iso_distributors.yml" \
-      "$PROJECT_ROOT/configs/pos_config.yml"
+      "$PROJECT_ROOT/configs/pos_config.yml" \
+      "$PROJECT_ROOT/tech/website/public/index.html" \
+      "$PROJECT_ROOT/tech/website/src/app.js"
+
+# Populate index.html with initial content
+echo "<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>Persephone's Garden</title>
+</head>
+<body>
+    <h1>Welcome to Persephone's Garden</h1>
+    <p>Explore the mythic and modern sanctuary.</p>
+</body>
+</html>" > "$PROJECT_ROOT/tech/website/public/index.html"
+
+# Populate app.js with initial content
+echo "// JavaScript entry point for the website
+console.log(\"Welcome to Persephone's Garden!\");" > "$PROJECT_ROOT/tech/website/src/app.js"
 
 # Make this script executable
 chmod +x "$PROJECT_ROOT/scripts/generate_structure.sh"

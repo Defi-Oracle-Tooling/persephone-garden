@@ -5,11 +5,11 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="hero text-white flex items-center justify-center h-screen">
+      <section className="hero text-white flex items-center justify-center h-screen bg-gradient-to-r from-purple-500 to-indigo-600">
         <div className="text-center">
-          <h1 className="text-5xl font-bold mb-4">Step Into the Dream of Persephone’s Garden</h1>
+          <h1 className="text-5xl font-bold mb-4 font-serif">Step Into the Dream of Persephone’s Garden</h1>
           <p className="text-lg mb-6">Where myth and modernity meet in a sanctuary of scent, sound, and possibility.</p>
-          <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">Explore the Garden</button>
+          <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-transform transform hover:scale-105">Explore the Garden</button>
         </div>
       </section>
 
@@ -75,7 +75,7 @@ export default function Home() {
         <p className="text-lg max-w-3xl mx-auto mb-6">
           Join our monthly Garden Workshops to learn about mindfulness, crafting topicals, and flavor journeys.
         </p>
-        <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">View Upcoming Events</button>
+        <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-transform transform hover:scale-105">View Upcoming Events</button>
       </section>
     </Layout>
   );

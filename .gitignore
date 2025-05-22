@@ -1,0 +1,31 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*~
+
+# Node.js dependencies (if applicable)
+node_modules/
+
+# Build output directories (if applicable)
+dist/
+build/
+out/
+
+# Environment variables
+.env
+*.env
+
+# IDE and editor folders and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

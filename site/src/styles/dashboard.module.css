@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* dashboard.module.css */
 
 .dashboard {
@@ -16,6 +20,31 @@
 .content {
     flex: 1;
     display: flex;
+}
+
+/* Add smooth scrolling for hero section */
+.hero {
+    height: 100vh;
+    background-image: url('/path-to-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .sidebar {
